@@ -1,0 +1,46 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content " style="width: 150px !important">
+    <li><a class="black-text" href="/config">Configuration</a></li>
+    <li class="divider"></li>
+    <li><a class="black-text" href="/logout">Log Out</a></li>
+</ul>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-wrapper blue-grey darken-4">
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="http://estacionuninor.ddns.net:3001/" target="_blank">Estaciones meteorológicas</a></li>
+            <!-- Dropdown Trigger -->
+            <% if (userId){ %>
+            <li><a class="black-text" href="/config">Configuration</a></li>
+            <li class="divider"></li>
+            <li><a class="black-text" href="/logout">Log Out</a></li>
+
+            <% } else{  %>
+            <li class="<%=active[1]%>"><a href="/register">Sign up</a></li>
+            <li class="<%=active[2]%>"><a href="/login">Log in </a></li>
+            <% } %>
+        </ul>
+
+        <% if (userId){ %>
+        <a class="center brand-logo" href="/"><img src="img/electricity.png" width="30" height="30" class="" alt="">
+            UniGrid</a>
+        <% }%>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="left hide-on-med-and-down">
+            <li><a href="http://estacionuninor.ddns.net:3001/" target="_blank">Estaciones meteorológicas</a></li>
+            <!-- Dropdown Trigger -->
+            <% if (userId){ %>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i
+                        class="material-icons right">arrow_drop_down</i></a></li>
+            <% } else{  %>
+            <li class="<%=active[1]%>"><a href="/register">Sign up</a></li>
+            <li class="<%=active[2]%>"><a href="/login">Log in </a></li>
+            <% } %>
+        </ul>
+
+
+    </div>
+</nav>
+<script>
+</script>

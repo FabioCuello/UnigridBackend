@@ -1,0 +1,44 @@
+<%- include("../components/header") -%>
+
+<body>
+    <%- include("../components/navbar/navbar") -%>
+    <div class="main">
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="images/Logo_uninorte_colombia.jpg" alt="sing up image"></figure>
+                        <a href="/register" class="signup-image-link">Don't have an account? Sign up</a>
+                    </div>
+                    <div class="signin-form">
+                        <h4 class="form-title center-align">UniGrid</h4>
+                        <div class="divider"></div>
+                        <div class="formContainer">
+                            <form id="formLogin" class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">mail</i>
+                                        <input required id="email" name="email" type="email" class="validate">
+                                        <label for="email">Email</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">vpn_key</i>
+                                        <input required id="password" name="password" type="password" class="validate">
+                                        <label for="password">Password</label>
+                                    </div>
+                                </div>
+                                <div class="form-group form-button center">
+                                    <button class="btn waves-effect waves-light" id="buttonLogin" type="submit">Sign in
+                                    </button>
+                                    <a class="center-align" href="/password/email">Forgot your password?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<%- include("../components/footer") -%>

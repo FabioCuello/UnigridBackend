@@ -1,0 +1,199 @@
+
+ body {
+   background-color: white;
+   /* background-position: center top;
+   background-repeat: no-repeat;
+   background-attachment: fixed; 
+   background-size: cover; */
+ }
+ .backgroundimg{
+   width: 100%;
+   height: 100%;
+ }
+ 
+ .N611{
+   position: relative;
+   background:transparent;
+ }  
+ .N671 {
+  position: relative;
+  background: transparent;
+}
+/*Esto lo hice para ver en que caso me encuentro*/
+  /* .example {
+  height:30px;
+  width: 100%;
+  top: 0%;
+  position: absolute;
+}  
+ Extra small devices (phones, 375px and down)
+ @media only screen and (max-width: 375px) {
+   .example {background: red;}
+   body {
+      background-image: url("img/UniGRID400.png");
+    }
+    .N611{
+      height:20px;
+      width: 6%;
+      margin-top: 95%;
+      left: 18%;
+    }
+    .N671 {
+      height:20px;
+      width: 6%;
+      margin-top: -42%;
+      left: 56%;
+    }
+ }
+ @media only screen and (min-width: 375px) {
+   .example {background:yellow;}
+   body {
+      background-image: url("img/UniGRIDiphone.png");
+    }
+    .N611{
+      height:30px;
+      width: 5%;
+      margin-top: 95%;
+      left: 24%;
+    }
+    .N671 {
+      height:30px;
+      width: 5%;
+      margin-top: -33%;
+      left: 55%;
+    }
+ }
+ @media only screen and (min-width: 375px) and (min-height: 812px) {
+   .example {background: black;}
+   body {
+      background-image: url("img/UniGRIDiphone.png");
+    }
+    .N611{
+      height:30px;
+      width: 8%;
+      margin-top: 118%;
+      left: 18%;
+    }
+    .N671 {
+      height:30px;
+      width: 8%;
+      margin-top: -40%;
+      left: 55%;
+    }
+ }
+
+ @media only screen and (min-width: 500px) {
+   .example {background: purple;}
+   body {
+      background-image: url("img/UniGRID600x600.png");
+    }
+    .N611{
+      height:40px;
+      width: 6%;
+      margin-top: 121%;
+      left: 5%;
+    }
+    .N671 {
+      height:40px;
+      width: 6%;
+      margin-top: -55%;
+      left: 57%;
+    }
+ }
+ 
+ /* Medium devices (landscape tablets, 600px and up) */
+ /* @media only screen and (min-width: 600px) {
+   .example {background: blue;}
+   body {
+      background-image: url("img/UniGRIDIpadpro.png");
+   }
+   .N611{
+      height:40px;
+      width: 5%;  
+      margin-top: 80%;
+      left: 24%;
+    }
+    .N671 {
+      height:40px;
+      width: 5%;
+      margin-top: -32%;
+      left: 54%;
+    }
+ } 
+ @media only screen and (min-width: 800px) {
+   .example {background: orange;}
+   body {
+      background-image: url("img/UniGRIDIpadpro.png");
+   }
+   .N611{
+      height:50px;
+      width: 5%;
+      margin-top: 83%;
+      left: 24%;
+    }
+    .N671 {
+      height:50px;
+      width: 5%;
+      margin-top: -33%;
+      left: 54%;
+    }
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ /* @media only screen and (min-width: 1200px) {
+   .example {background: pink;}
+   body {
+      background-image: url("img/UniGRID.png");
+   }
+   .N611{
+      height:40px;
+      width: 3%;
+      margin-top: 36%;
+      left: 34%;
+    }
+    .N671 {
+      height:40px;
+      width: 3%;
+      margin-top: -20%;
+      left: 53%;
+    }
+ }
+ @media only screen and (min-width: 2500px) {
+  .example {background: magenta;}
+  body {
+     background-image: url("img/UniGRID.png");
+  }
+  .N611{
+     height:100px;
+     width: 4%;
+     margin-top: 48%;
+     left: 30%;
+   }
+   .N671 {
+     height:100px;
+     width: 4%;
+     margin-top: -24%;
+     left: 53%;
+   } */
+
+/* @media only screen and (min-width: 5000px) {
+  .example {background: aqua;}
+  body {
+     background-image: url("img/UniGRID.png");
+  }
+  .N611{
+     height:200px;
+     width: 4%;
+     margin-top: 45%;
+     left: 28%;
+   }
+   .N671 {
+     height:200px;
+     width: 4%;
+     margin-top: -28%;
+     left: 54%;
+   } 
+}*/
+  
+  
+ 

@@ -1,0 +1,46 @@
+
+.sign-in{
+    margin: 5%;
+  }
+.signup{
+    margin-top: 5%;
+  }
+.center{
+    text-align: center;
+  }
+.formContainer{
+    margin-top: 20px;
+  }
+a.center-align{
+  margin-top: 2%;
+  color: black;
+  display: block;
+  font-size: small;
+}
+/* Mobile Devices<= 600px
+@media (max-width:600px){
+  body{
+    background-image: url("../images/UniGRID600x600.png");
+  }
+}
+
+/* Tablet Devices> 600px */
+/* @media (min-width:600px) and (max-width:730px) {
+  body{
+    background-image: url("../images/UniGRID600x600.png");
+  }
+} */
+
+/* Desktop Devices> 992px */
+/* @media (min-width:731px) and (max-width:1200px){
+  body{
+    background-image: url("../images/UniGRID.png");
+  }
+} */
+
+/* Large Desktop Devices> 1200px */
+/* @media (min-width:1200px) {
+  body{
+    background-image: url("../images/UniGRID.png");
+  }
+}  */

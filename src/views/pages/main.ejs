@@ -1,0 +1,38 @@
+<%- include("../components/header") -%>
+
+<body>
+  <%- include("../components/navbar/navbar") -%>
+  <br>
+  <img class="materialboxed " width=auto src="images/UniGRID.png">
+  <div class="container">
+    <ul class="collapsible">
+      <li class="active">
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Available nodes</div>
+        <div class="collapsible-body">
+          <div class="row">
+            <div class="col l1 s2">
+              <p>N611</p>
+            </div>
+            <div class="col l1 s2 ">
+              <a id="N611" class="btn-floating btn-large pulse" href="https://nodo611.herokuapp.com/" target="_blank"><i
+                  class="material-icons">cloud</i></a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <br>
+
+  <!-- SECTION: iframes from others servers -->
+  <iframe src="https://nodo611.herokuapp.com/" style="display: none;" id="f"></iframe>
+
+</body>
+
+<!-- User auth -->
+<script defer>
+  const admin = "<%=admin%>"
+</script>
+
+
+<%- include("../components/footer") -%>

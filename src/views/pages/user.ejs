@@ -1,0 +1,126 @@
+<%- include("../components/header") -%>
+
+<body>
+
+    <!-- SECTION: Navbar -->
+    <%- include("../components/navbar/navbar") -%>
+    <div class="main">
+        <section class="sign-in">
+
+            <!-- SECTION: Conteiner -->
+            <div class="container">
+                <div class="signin-content" style="padding: 0; margin-bottom: 10%;">
+                    <div class="signin-form" style="margin:0 auto;">
+                        <h3 class="form-title center-align">Configuration</h3>
+                        <br>
+                        <div class="row">
+
+                            <!-- SECTION: Fields -->
+                            <form id="formUser" class="col s12">
+                                <div class=" row">
+                                    <div class="input-field col s6">
+                                        <input disabled placeholder="Tu nombre" value="<%=firstname%>" required
+                                            id="first_name" type="text" class="validate">
+                                        <label for="first_name">First Name</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input disabled id="last_name" type="text" value="<%=lastname%>"
+                                            class="validate">
+                                        <label for="last_name">Last Name</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input disabled value="<%=email%>" id="disabled" type="text" class="validate">
+                                        <label for="disabled">Email</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div style="white-space: nowrap;" class="col s2">
+                                        Weather Alarms
+                                    </div>
+                                    <div class="input-field col s6 offset-s4">
+                                        <div class="switch">
+                                            <label>
+                                                Off
+                                                <% if (alert) { %>
+                                                <input id="alert" name="alert" type="checkbox" checked>
+                                                <span class="lever"></span>
+                                                <% }else{ %>
+                                                <input id="alert" name="alert" type="checkbox">
+                                                <span class="lever"></span>
+                                                <%}%>
+                                                    On
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div style="white-space: nowrap;" class="col s2">
+                                            Newsletters
+                                        </div>
+                                        <div class="input-field col s6 offset-s4">
+                                            <div class="switch">
+                                                <label>
+                                                    Off
+                                                    <% if (newsletter) { %>
+                                                <input id="newsletter" name="newsletter" type="checkbox" checked>
+                                                <span class="lever"></span>
+                                                <% }else{ %>
+                                                <input id="newsletter" name="newsletter" type="checkbox">
+                                                <span class="lever"></span>
+                                                <% } %>
+                                                On
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div style="white-space: nowrap;" class="col s2">
+                                        Administrator
+                                    </div>
+                                    <div class="input-field col s4 offset-s4">
+                                        <div class="switch">
+                                            <label>
+                                                Off
+                                                <% if (moderator) { %>
+                                                <input disabled type="checkbox" checked>
+                                                <span class="lever"></span>
+                                                <% }else{ %>
+                                                <input disabled type="checkbox">
+                                                <span class="lever"></span>
+                                                <%}%>
+                                                    On
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% if (!moderator) { %>
+                                                <div class="row">
+                                                    <div style="white-space: nowrap;"
+                                                        class="input-field col s8 offset-s2">
+                                                        <a id="buttonAdm"
+                                                            class="waves-effect waves-teal z-depth-2 btn red">request
+                                                            Administrator</a>
+                                                    </div>
+                                                </div>
+                                                <% } %>
+                                                <div class="divider"></div>
+                                                <div style="margin-top: 15px;" class="form-group form-button center">
+                                                    <button id="button" class="btn waves-effect waves-light "
+                                                        type="submit">Update
+                                                        <i class="material-icons right">send</i>
+                                                    </button>
+                                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<%- include("../components/footer") -%>

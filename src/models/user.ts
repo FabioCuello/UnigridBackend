@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import { hash, compare } from "bcryptjs"
 import { createHash, createHmac, timingSafeEqual } from "crypto"
-import { BCRYPT_WORK_FACTOR, EMAIL_VERIFICATION_TIMEOUT, APP_ORIGIN, APP_SECRET } from "../config/index"
+import { BCRYPT_WORK_FACTOR, EMAIL_VERIFICATION_TIMEOUT, APP_ORIGIN, APP_SECRET } from "../config"
 import { userDocument, UserModel } from "./interfaces"
 
 const infoSchema = new Schema({
@@ -17,7 +17,10 @@ const subscriptionSchema = new Schema({
 const userSchema = new Schema({
     data: infoSchema,
     subcriptions: subscriptionSchema,
-    admin: { type: Boolean, default: false },
+    admin: {
+        type: Boolean,
+        default: false
+    },
     verifiedAt: Date
 })
 

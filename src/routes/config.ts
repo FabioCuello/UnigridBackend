@@ -34,7 +34,9 @@ router.get("/config/user/request/admin/verify", catchAsync(async (req: Request, 
         return res.render("pages/message", { message: "Invalid activation link" })
     }
 
-    if (user.admin) return res.render("pages/message", { message: `User with email: ${user.data.email} is already an administrator` })
+    if (user.admin) {
+        return res.render("pages/message", { message: `User with email: ${user.data.email} is already an administrator` })
+    }
 
     user.admin = true
     await user.save()
@@ -44,6 +46,10 @@ router.get("/config/user/request/admin/verify", catchAsync(async (req: Request, 
 
 router.post("/config/user/request/admin", RequireAuth, catchAsync(async (req: Request, res: Response) => {
     const user = await User.findById(req.session!.userId)
+
+    if (await adminRequest.find({ userId: user!.id })) {
+        return res.send({ message: "Your request was already sent to the administrator" })
+    }
 
     const token = adminRequest.plaintextToken()
     const newAdminRequest = await adminRequest.create({
@@ -65,10 +71,13 @@ router.patch("/config/user/set", RequireAuth, async (req, res) => {
     try {
         const alert = req.body.alert == "true" ? true : false
         const newsletter = req.body.newsletter == "true" ? true : false
+
         const user = await User.findById(req.session!.userId)
+
         user!.subcriptions.alerts = alert
         user!.subcriptions.newsletter = newsletter
         await user!.save()
+
         res.json({
             sucess: true,
             message: "Changes have been successfully saved"

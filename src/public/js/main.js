@@ -57,7 +57,6 @@ $("#resetForm").on("submit", e => {
 })
 
 $("#resetPasswordForm").on("submit", e => {
-    console.log("form")
     e.preventDefault()
 
     const data = {

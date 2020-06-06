@@ -14,23 +14,23 @@ router.post("/login", RequireNotAuth, catchAsync(async (req: Request, res: Respo
     const user = await User.findOne({ "data.email": req.body.email })
 
     if (!user || !await user.comparePassword(req.body.password)) {
-        return res.send({ success: false, message: "Invalid email or password " })
+        return res.send({ success: false, admin: false, message: "Invalid email or password " })
     }
 
-    if (!user.verifiedAt) return res.send({ success: false, message: "Please complete your registration to loging" })
+    if (!user.verifiedAt) return res.send({ success: false, admin: false, message: "Please complete your registration to loging" })
 
     logIn(req, user._id)
 
-    res.send({ success: true })
+    res.send({ success: true, admin: user.admin })
 }))
 
-router.get("/logout", RequireAuth, (req: Request, res: Response) => {
+router.post("/logout", RequireAuth, (req: Request, res: Response) => {
     req.session!.destroy(err => {
         if (err) {
-            return res.redirect("/home")
+            res.send({ success: false, message: "Please try again" })
         } else {
             res.clearCookie(`${SESSION_NAME}`)
-            res.redirect("/")
+            res.send({ success: true })
         }
     })
 })

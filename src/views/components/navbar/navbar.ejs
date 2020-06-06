@@ -2,7 +2,7 @@
 <ul id="dropdown1" class="dropdown-content " style="width: 150px !important">
     <li><a class="black-text" href="/config">Configuration</a></li>
     <li class="divider"></li>
-    <li><a class="black-text" href="/logout">Log Out</a></li>
+    <li><a class="black-text" id="logout" href="">Log Out</a></li>
 </ul>
 
 <!-- NAVBAR -->
@@ -14,7 +14,7 @@
             <% if (userId){ %>
             <li><a class="black-text" href="/config">Configuration</a></li>
             <li class="divider"></li>
-            <li><a class="black-text" href="/logout">Log Out</a></li>
+            <li><a class="black-text" id="logout" href="">Log Out</a></li>
 
             <% } else{  %>
             <li class="<%=active[1]%>"><a href="/register">Sign up</a></li>

@@ -38,7 +38,7 @@ router.post("/register", RequireNotAuth, catchAsync(async (req: Request, res: Re
 
     const link = newUser.verificationUrl()
 
-    await sendEmail("Subscripción", email, `Complete your register with this link: ${link}`)
+    await sendEmail("Subscription", email, `Complete your register with this link: ${link}`)
 
     req.session!.message = `An email has been send to ${email}. Complete your registration to continue`
 

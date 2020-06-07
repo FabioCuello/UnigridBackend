@@ -58,11 +58,11 @@ router.post("/config/user/request/admin", RequireAuth, catchAsync(async (req: Re
     })
     const link = newAdminRequest.url(token)
 
-    const output = `<h3> El usuario ${user!.data.firstName} ${user!.data.lastName} desea ser administrador</h3> 
-    <h2> Para habilitar al usuario de click en el siguiente link: </h2>
-    ${link}`
+    const output = `<h3> The user ${user!.data.firstName} ${user!.data.lastName} request to be an administrator</h3> 
+    <h2> <strong> You can enable this request </strong> throught the following link <strong>or ignore the request</strong>: ${link}</h2>`
 
-    await sendEmail("Solicitud de administrador", [`${ADMIN_EMAIL}`], output)
+
+    await sendEmail("Administrator request", [`${ADMIN_EMAIL}`], output)
 
     res.send({ message: "An email has been sent to the administrator" })
 }))

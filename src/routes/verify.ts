@@ -8,7 +8,7 @@ const router = Router()
 router.get("/email/verify", catchAsync(async (req: Request, res: Response) => {
     const { id } = req.query
 
-    const user = await User.findById(id).select("verifiedAt")
+    const user = await User.findById(id).select("verifiedAt data.email data.firstName data.lastName")
 
     res.locals = { active: ["", "", ""] }
 

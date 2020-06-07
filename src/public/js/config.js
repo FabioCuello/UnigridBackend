@@ -1,1 +1,1 @@
-const APP_ORIGIN = "http://localhost:3002"
+const APP_ORIGIN = "http://estacionuninor.ddns.net:3002"

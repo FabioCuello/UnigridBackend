@@ -47,7 +47,7 @@ router.get("/config/user/request/admin/verify", catchAsync(async (req: Request, 
 router.post("/config/user/request/admin", RequireAuth, catchAsync(async (req: Request, res: Response) => {
     const user = await User.findById(req.session!.userId)
 
-    if (await adminRequest.find({ userId: user!.id })) {
+    if (await adminRequest.findOne({ userId: user!.id })) {
         return res.send({ message: "Your request was already sent to the administrator" })
     }
 
